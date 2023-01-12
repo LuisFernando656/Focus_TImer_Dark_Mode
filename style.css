@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: 240;
+  --background: hsl(120, 0%, var(--black-white-bg));
+  --btn_click: hsl(calc(var(--base-color) - 46), 97%, var(--dark-button));
+  --text_color: hsl(225, var(--color), var(--black-white-text));
+  --black-white-text: 21%;
+  --black-white-bg: 100%;
+  --dark-button: 31%;
+  --color: 6%;
+  --input-range-color: #323238;
+
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Roboto', sans-serif;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  transition: background 400ms;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+main {
+  width: min(82.1rem, 80%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 19.2rem;
+}
+
+.timer_container {
+  width: 32rem;
+}
+
+.timer {
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+
+  text-transform: uppercase;
+  color: var(--text_color);
+
+  margin-bottom: 1.7rem;
+
+  display: flex;
+  transition: all 800ms;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+svg {
+  transition: all 800ms;
+}
+
+.controls svg path {
+  fill: var(--text_color);
+}
+
+.customize_container {
+  display: grid;
+  grid-template-areas:
+  'A B'
+  'C D';
+  gap: 3.2rem;
+}
+
+.customize_container button {
+  width: 13.8rem;
+  height: 15.2rem;
+}
+
+.customize_container button svg {
+  margin-bottom: 3.2rem;
+}
+
+.container_cafe,
+.container_rain,
+.container_fire,
+.container_tree{
+  position: relative;
+  border-radius: 2.4rem;
+  background: #E1E1E6;
+}
+
+.vol_tree,
+.vol_rain,
+.vol_cafe,
+.vol_fire {
+  width: 9.8rem;
+  height: .6rem;
+  border-radius: .5rem;
+  appearance: none;
+  background: var(--input-range-color);
+  margin-top: 3.2rem;
+  position: absolute;
+  bottom: 2.7rem;
+  left: 2rem;
+}
+
+.vol_tree::-webkit-slider-thumb,
+.vol_rain::-webkit-slider-thumb,
+.vol_cafe::-webkit-slider-thumb,
+.vol_fire::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--input-range-color);
+  cursor: pointer;
+}
+
+.selected {
+  background: var(--btn_click);
+  transition: fill 800ms;
+}
+
+.selected svg path {
+  fill: white;
+  transition: fill 400ms;
+}
+
+.selected .vol_cafe,
+.selected .vol_tree,
+.selected .vol_rain,
+.selected .vol_fire,
+.selected .vol_tree::-webkit-slider-thumb,
+.selected .vol_rain::-webkit-slider-thumb,
+.selected .vol_cafe::-webkit-slider-thumb,
+.selected .vol_fire::-webkit-slider-thumb{
+  background: white;
+  transition: fill 800ms;
+}
+
+.btn_bg_dark {
+  background: #29292e;
+}
+
+.btn_bg_dark svg path {
+  fill: white;
+}
+
+.btn_sun,
+.btn_moon {
+  position: absolute;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+.hide {
+  display: none;
+}
