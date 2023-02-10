@@ -5,7 +5,7 @@ export default function Timer({
 
   let minutes = +minutesDisplay.innerHTML
   let seconds = +secondsDisplay.innerHTML
-  let newMinutes
+  let newMinutes = 25
   let timerTimeOut
 
   function reset () {
