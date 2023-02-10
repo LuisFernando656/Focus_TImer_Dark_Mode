@@ -89,6 +89,10 @@ svg {
   height: 15.2rem;
 }
 
+.btn_tree,.btn_rain,.btn_cafe,.btn_fire {
+  cursor:pointer
+}
+
 .customize_container button svg {
   margin-bottom: 3.2rem;
 }
