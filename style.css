@@ -168,8 +168,13 @@ svg {
   position: absolute;
   top: 6.4rem;
   right: 6.4rem;
+  cursor: pointer;
 }
 
 .hide {
   display: none;
+}
+
+.btn_add, .btn_play, .btn_dec, .btn_stop {
+  cursor: pointer;
 }
